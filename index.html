@@ -134,16 +134,15 @@
   <script>
     const hero = document.getElementById('hero');
     const duo = document.getElementById('duo');
-    let duoRevealed = false;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting && !duoRevealed) {
+        if (!entry.isIntersecting) {
           hero.classList.add('scaled');
           duo.classList.add('visible');
-          duoRevealed = true;
-        } else if (entry.isIntersecting) {
+        } else {
           hero.classList.remove('scaled');
+          duo.classList.remove('visible');
         }
       },
       {
