@@ -2,37 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>FATED - Status Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FATED - Game Showcase</title>
   <style>
-    .status-tracker {
-      width: 300px;
-      padding: 20px;
-      background-color: #1a1a1a;
-      border: 2px solid #ff3c3c;
-      border-radius: 10px;
-      color: #fff;
+    body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      box-shadow: 0 0 10px rgba(255, 60, 60, 0.5);
+      background-color: #0d0d0d;
+      color: #f0f0f0;
     }
 
-    .status-tracker h2 {
-      margin: 0 0 10px;
-      font-size: 1.5em;
+    /* Fixed Status Tracker */
+    .status-tracker {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #1a1a1a;
+      border-left: 6px solid #ff3c3c;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 60, 60, 0.4);
+      z-index: 1000;
+    }
+
+    .status-tracker h3 {
+      margin: 0;
+      font-size: 1.1em;
       color: #ff3c3c;
     }
 
-    .status {
-      font-size: 1.2em;
+    .status-tracker p {
+      margin: 5px 0 0;
       font-weight: bold;
       color: #ff3c3c;
+    }
+
+    /* Main Content */
+    .container {
+      padding: 100px 20px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .character {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .character img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .character h2 {
+      margin-top: 20px;
+      font-size: 2em;
+      color: #ff3c3c;
+    }
+
+    @media (max-width: 768px) {
+      .status-tracker {
+        top: 10px;
+        left: 10px;
+        padding: 10px 15px;
+      }
+
+      .character img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Fixed Status Tracker -->
   <div class="status-tracker">
-    <h2>FATED - Status Tracker</h2>
-    <p>Status: <span class="status">In Development</span></p>
+    <h3>FATED - Status Tracker</h3>
+    <p>Status: In Development</p>
+  </div>
+
+  <!-- Scrollable Content -->
+  <div class="container">
+    <div class="character">
+      <img src="https://raw.githubusercontent.com/But-I-have-a-Gun/FATED/refs/heads/main/photos/Hero_Fated.jpg" alt="Hero of FATED">
+      <h2>The Hero</h2>
+    </div>
+
+    <div class="character">
+      <img src="https://raw.githubusercontent.com/But-I-have-a-Gun/FATED/refs/heads/main/photos/HUNTER_Fated.png" alt="The Hunter">
+      <h2>The Hunter</h2>
+    </div>
+
+    <div class="character">
+      <img src="https://raw.githubusercontent.com/But-I-have-a-Gun/FATED/refs/heads/main/photos/HUNTED_Fated.png" alt="The Hunted">
+      <h2>The Hunted</h2>
+    </div>
   </div>
 
 </body>
